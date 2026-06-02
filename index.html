@@ -9,22 +9,33 @@
             margin: 0;
             background: transparent;
             overflow: hidden;
+            width: 100vw;
+            height: 100vh; 
+
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; 
         }
         
         .robot {
-            width:120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             background: #4CAF50;
             border-radius: 50%;
+
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 50px;
-            cursor: pointer;
+
+            font-size: 60px;
+            user-select: none;
+
+            -webkit-app-region: drag;
+        }
+
+        .robot:hover {
+            transform: scale(1.03);
+            transition: 0.2s;
         }
     </style>
 </head>
@@ -33,5 +44,6 @@
     <div class = "robot">
         🤖
     </div>
+    
 </body>
 </html>
