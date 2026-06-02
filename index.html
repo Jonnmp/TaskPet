@@ -31,11 +31,26 @@
             user-select: none;
 
             -webkit-app-region: drag;
+
+            animation: float 2.5s ease-in-out infinite;
         }
 
         .robot:hover {
-            transform: scale(1.03);
-            transition: 0.2s;
+            transform: scale(1.05);
+        }
+
+        @keyframes float {
+            0% {
+             transform: translateY(0px); 
+            }
+
+            50% {
+             transform: translateY(-6px);
+            }
+
+            100% {
+             transform: translateY(0px);
+            }
         }
     </style>
 </head>
