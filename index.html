@@ -16,6 +16,8 @@
       justify-content: center;
       align-items: center;
       position: relative;
+
+      -webkit-app-region: drag;
     }
 
     .robot {
@@ -32,14 +34,20 @@
       user-select: none;
       cursor: pointer;
 
-      -webkit-app-region: drag;
-
       animation: float 2.5s ease-in-out infinite;
+
+      -webkit-app-region: no-drag;
+
+      position: relative;
+      z-index: 2;
     }
 
     .speech-bubble {
       position: absolute;
-      top: 0px;
+
+      bottom: 145px;
+      left: 50%;
+      transform: translateX(-50%);
 
       background: rgba(40, 40, 40, 0.95);
       color: white;
@@ -57,6 +65,13 @@
       visibility: hidden;
 
       transition: opacity 0.3s ease;
+
+      z-index: 999;
+
+      pointer-events: none;
+
+      white-space: nowrap;
+
     }
 
     .speech-bubble.show {
@@ -97,7 +112,7 @@
       "¿Cómo van tus tareas? 😄",
       "No olvides descansar 😴",
       "¡Tú puedes! 🚀",
-      "¿Ya revisaste pendientes? 👀"
+      "¿Ya revisaste pendientes?"
     ];
 
     let bubbleTimeout;
