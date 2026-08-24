@@ -1,4 +1,4 @@
-const { app, BrowserWindow, screen } = require('electron');
+const { app, BrowserWindow, screen } = require ('electron');
 
 const {
     saveWindowPosition,
@@ -38,8 +38,8 @@ function createWindow() {
     }
 
     const win = new BrowserWindow({
-        width: 180,
-        height: 180,
+        width: 300,
+        height: 300,
 
         x: startX,
         y: startY,

@@ -38,28 +38,37 @@
 
       -webkit-app-region: no-drag;
 
-      position: relative;
+      position: absolute;
+      bottom: 20px;
+
       z-index: 2;
     }
 
     .speech-bubble {
       position: absolute;
 
-      bottom: 145px;
+      bottom: 190px;
       left: 50%;
       transform: translateX(-50%);
 
       background: rgba(40, 40, 40, 0.95);
       color: white;
 
-      padding: 10px 16px;
+      padding: 12px 18px;
       border-radius: 18px;
 
       font-family: Arial, sans-serif;
       font-size: 14px;
+      line-height: 1.4;
 
       text-align: center;
-      max-width: 180px;
+
+      width: max-content;
+      min-width: 90px;
+      max-width: 220px;
+
+      white-space: normal;
+      word-wrap: break-word;
 
       opacity: 0;
       visibility: hidden;
@@ -69,15 +78,114 @@
       z-index: 999;
 
       pointer-events: none;
-
-      white-space: nowrap;
-
     }
 
     .speech-bubble.show {
       opacity: 1;
       visibility: visible;
     }
+
+    .floating-button {
+      position: absolute;
+      top: 170px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 42px;
+      height: 42px;
+      border: none;
+      border-radius: 50%;
+      background: #4CAF50;
+      color: white;
+      font-size: 26px;
+      cursor: pointer;
+      transition: .2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,.25);
+    }
+
+    .floating-button:hover{
+      transform:
+        translateX(-50%)
+        scale(1.08);
+      background: #45A049;
+    }
+
+    .task-panel{
+    position: absolute;
+    bottom: 190px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    padding: 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    z-index: 1000;
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform:
+        translateX(-50%)
+        translateY(15px);
+
+}
+
+.task-panel h2{
+    margin: 0;
+    font-size: 20px;
+    color: #1F2937;
+    text-align: center;
+}
+
+.task-panel input{
+    padding: 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.task-panel input:focus{
+    border-color: #4CAF50;
+}
+
+.task-buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.task-buttons button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px 18px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#cancel-task{
+    background: #E5E7EB;
+}
+
+#cancel-task:hover{
+    background: #D1D5DB;
+}
+
+#save-task{
+    background: #4CAF50;
+    color: white;
+}
+
+#save-task:hover{
+    background: 45A049;
+}
 
     @keyframes float {
       0% {
@@ -103,26 +211,52 @@
     🤖
   </div>
 
+  <button id="add-task-btn" class="floating-button">
+    ➕
+  </button>
+
+   <div id="task-panel" class="task-panel hidden">
+
+    <h2>Nueva Tarea</h2>
+
+    <input
+      id="task.input"
+      type="text"
+      placeholder="Que necesitas hacer?"
+      maxlength="100"
+      >
+
+    <div class = "task-buttons">
+
+        <button id = "cancel-task">
+            Cancelar
+        </button>
+
+        <button id="save-task">
+            Agregar
+        </button>
+
+    </div>
+
+</div>
+
   <script>
     const robot = document.getElementById("robot");
     const speechBubble = document.getElementById("speechBubble");
 
-    const messages = [
-      "Hola 👋",
-      "¿Cómo van tus tareas? 😄",
-      "No olvides descansar 😴",
-      "¡Tú puedes! 🚀",
-      "¿Ya revisaste pendientes?"
-    ];
+    const {
+      getMoodMessage
+    } = require("./src/services/EmotionManager");
 
+    const {
+      addTask,
+      getPendingTasks
+    } = require("./src/services/TaskManager");
     let bubbleTimeout;
 
-    robot.addEventListener("click", () => {
+    function showMessage(message) {
 
-      const randomMessage =
-        messages[Math.floor(Math.random() * messages.length)];
-
-      speechBubble.textContent = randomMessage;
+      speechBubble.textContent = message;
 
       speechBubble.classList.add("show");
 
@@ -131,9 +265,73 @@
       bubbleTimeout = setTimeout(() => {
         speechBubble.classList.remove("show");
       }, 3000);
+    }
+
+    robot.addEventListener("click", () => {
+
+      const moodData = getMoodMessage();
+
+      showMessage(moodData.message);
+
+      console.log("Mood:", moodData.mood);
 
     });
+
+    robot.addEventListener("contextmenu", (event) => {
+
+      event.preventDefault();
+
+      const taskTitle = 
+      prompt("Escribe tu nueva tarea:")
+
+      if (!taskTitle || !taskTitle.trim()) {
+        return;
+      } 
+
+      const newTask = addTask(taskTitle.trim());
+
+      showMessage(
+        `✅ Tarea agregada:\n${newTask.title}`
+      );
+
+      console.log(
+        "Nueva Tarea:",
+        newTask
+      );
+    });
+
+    function autoTalk() {
+      
+      const moodData = getMoodMessage();
+      
+      showMessage(moodData.message);
+
+      console.log("Auto mood:", moodData.mood);
+
+      const minTime = 5 * 60 * 1000;
+      const maxTime = 15 * 60 * 1000;
+
+      const randomTime = Math.floor(Math.random() * (maxTime - minTime)) + minTime;
+
+      setTimeout(autoTalk, randomTime);
+    }
+
+    setTimeout(autoTalk, 30000);
   </script>
 
+  const addTaskButton = 
+  document.getElementById("add-task-btn");
+const taskPanel = 
+  document.getElementById("task-panel");
+const cancelTask = 
+  document.getElementById("cancel-task");
+
+addTaskButton.addEventListener("click", () => {
+  taskPanel.classList.remove("hidden");
+});
+
+cancelTask.addEventListener("click", () => {
+  taskPanel.classList.add("hidden");
+});
 </body>
 </html>
