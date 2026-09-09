@@ -28,6 +28,7 @@ function addTask(dataTasks) {
     const newTask = {
         id: Date.now().toString(),
         text: dataTasks.text,
+        createdAt: new Date().toISOString(),
         reminder: dataTasks.reminder,
         reminderMinutes: dataTasks.reminderMinutes,
         reminderInterval: dataTasks.reminderInterval,
@@ -60,10 +61,59 @@ function deleteTask(id) {
     return deleteTasks;
 };
 
+function getNextReminderTime(task) {
+    if (task.reminder) {
+        return new Date(task.reminder)
+    }
+
+    if (task.reminderMinutes !== undefined && task.reminderMinutes !== null) {
+    const createdMs = new Date(task.createdAt).getTime();
+    const minutes = createdMs + (task.reminderMinutes * 60 * 1000)
+    return new Date(minutes)
+    } 
+    return null;
+};
+
+function isTaskDue(task) {
+    if (task.completed) {
+        return false
+    }
+    const nextTime = getNextReminderTime(task)
+
+    if (nextTime === null) {
+        return false
+    }
+
+    if (task.reminderFinal === null) {
+        return new Date() >= nextTime
+        }
+
+    if (task.reminderInterval === undefined || task.reminderInterval === null) {
+        return false
+    }
+    const createdMsg = new Date(task.reminderFinal).getTime();
+    const minutes = createdMsg + (task.reminderInterval * 60 * 1000)
+    return new Date() >= new Date(minutes)  
+};
+
+function markReminded(id) {
+    const tasks = getTasks();
+    const mark = tasks.findIndex(task => task.id === id);
+    if (mark === -1) {
+        return null;
+    }
+    tasks[mark].reminderFinal = new Date().toISOString();
+    saveTasks(tasks);
+    return tasks[mark];
+}
+
 module.exports = {
     getTasks,
     addTask,
     saveTasks,
     completeTask,
-    deleteTask
+    deleteTask,
+    getNextReminderTime,
+    isTaskDue,
+    markReminded
 };
