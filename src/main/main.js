@@ -1,75 +1,57 @@
-const { app, BrowserWindow, screen } = require ('electron');
+const { app, BrowserWindow, Notification, ipcMain} = require ('electron');
+const {getTasks, isTaskDue, markReminded, addTask} = require("../services/TaskManager.js");
 
-const {
-    saveWindowPosition,
-    getWindowPosition
-} = require("../services/StorageManager");
 
 function createWindow() {
-    const savedPosition = getWindowPosition();
-
-    let startX;
-    let startY;
-
-    const primaryDisplay = screen.getPrimaryDisplay();
-    const { width, height } = primaryDisplay.workAreaSize;
-
-    startX = Math.floor(width / 2 - 90);
-    startY = Math.floor(height / 2 - 90);
-
-    if (savedPosition) {
-        const display = screen.getAllDisplays();
-
-        const isVisible = display.some(display => {
-            const bounds = display.workArea;
-            
-             return (
-                savedPosition.x >= bounds.x &&
-                savedPosition.x <= bounds.x + bounds.width &&
-                savedPosition.y >= bounds.y &&
-                savedPosition.y <= bounds.y + bounds.height
-            );
-        });
-
-        if (isVisible) {
-            startX = savedPosition.x;
-            startY = savedPosition.y;
-        }
-    }
 
     const win = new BrowserWindow({
-        width: 300,
-        height: 300,
-
-        x: startX,
-        y: startY,
-
+        width: 260,
+        height: 260,
         transparent: true,
         frame: false,
-        alwaysOnTop: true,
-        resizable: false,
-        hasShadow: false,
-
         webPreferences: {
             nodeIntegration: true,
             contextIsolation: false
-        }    
+        }
     });
-
-    win.loadFile("index.html");
-
-
-    win.on("moved", () => {
-        const [x, y] = win.getPosition();
-
-        saveWindowPosition({
-            x,
-            y
-        });
-    });
+    win.loadFile("src/renderer/index.html");
 }
+
+function checkReminders() {
+    getTasks().forEach(element => {
+        if (isTaskDue(element)) {
+            const notification = new Notification({
+                title: "Task Reminder",
+                body: element.text
+            });
+            notification.show();
+            markReminded(element.id)
+        }
+        
+    });
+} 
+
+let formWindow;
+
+ipcMain.on("open-form", () => {
+    formWindow = new BrowserWindow({
+        width: 400,
+        height: 300,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false
+        }
+    });
+    formWindow.loadFile("src/renderer/form.html");
+});
+
+ipcMain.on("send-task", (event, taskData) => {
+    addTask(taskData);
+    formWindow.close();
+});
+
 
 app.whenReady().then(() => {
     createWindow();
-}); 
-
+    setInterval(checkReminders, 60000);
+});
