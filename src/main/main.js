@@ -5,9 +5,9 @@ const {getTasks, isTaskDue, markReminded, addTask} = require("../services/TaskMa
 function createWindow() {
 
     const win = new BrowserWindow({
-        width: 400,
-        height: 300,
-        transparent: false,
+        width: 260,
+        height: 260,
+        transparent: true,
         frame: false,
         webPreferences: {
             nodeIntegration: true,

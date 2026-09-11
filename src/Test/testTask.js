@@ -1,4 +1,10 @@
-const { addTask } = require("../services/TaskManager.js");
+const { getTasks, completeTask } = require("../services/TaskManager.js");
 
-const nueva = addTask({ text: "Probar notificación real", reminderMinutes: 0 });
-console.log("Tarea creada:", nueva);
+const tasks = getTasks();
+console.log("Tareas actuales:", tasks);
+
+if (tasks.length > 0) {
+    const primeraTarea = tasks[0];
+    const resultado = completeTask(primeraTarea.id);
+    console.log("Tarea marcada como completada:", resultado);
+}

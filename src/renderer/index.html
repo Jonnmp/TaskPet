@@ -4,9 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TaskPet</title>
+    <style>
+  body {
+    margin: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .mascot {
+    width: 150px;
+    height: 150px;
+    background: #54585a;
+    border-radius: 50%;
+    position: relative;
+    animation: float 2.5s ease-in-out infinite;
+  }
+  .eye {
+    width: 20px;
+    height: 20px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    position: absolute;
+    top: 55px;
+  }
+  .mouth {
+    width: 30px;
+    height: 15px;
+    border-bottom: 3px solid #F5F5F5;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 95px;
+    left: 60px;
+  }
+  @keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.speech-bubble {
+  position: absolute;
+  background: rgba(40, 40, 40, 0.95);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  top: -40px;
+  opacity: 0;
+  visibility: hidden;
+}
+.speech-bubble.show {
+  opacity: 1;
+  visibility: visible;
+}
+</style>
 </head>
 <body>
-  <h1>TaskPet - Modo de Prueba</h1>
+  <div class="mascot" id="mascot">
+    <div class="eye" id="eyeLeft" style="left: 40px;"></div>
+    <div class="eye" id="eyeRight" style="left: 90px;"></div>
+    <div class="mouth"></div>
+    <div class="speech-bubble" id="speechBubble"></div>
+  </div>
   <button id="AddTask_btn">Agregar Tarea</button>
   <script src="./renderer.js"></script>
 </body>

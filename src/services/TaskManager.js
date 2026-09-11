@@ -107,6 +107,11 @@ function markReminded(id) {
     return tasks[mark];
 }
 
+function getPendingTasks() {
+    const tasks = getTasks();
+    const pending = tasks.filter(task => task.completed === false);
+    return pending;
+}
 module.exports = {
     getTasks,
     addTask,
@@ -115,5 +120,6 @@ module.exports = {
     deleteTask,
     getNextReminderTime,
     isTaskDue,
-    markReminded
+    markReminded,
+    getPendingTasks
 };
