@@ -1,12 +1,22 @@
-const { getPendingTasks } = require("../services/TaskManager");
+const { getPendingTasks, completeTask } = require("../services/TaskManager");
 
 const container = document.getElementById("TaskList-container");
-const task = getPendingTasks();
 
+function renderTask () {
+    const tasks = getPendingTasks();
+    let html = "";
+    tasks.forEach(element => {
+        html += `<div>${element.text} <button data-id="${element.id}">Completar</button></div>`;
+    });
+    container.innerHTML = html;
+}
 
-let html = "";
-task.forEach(Element => {
-    html += `<div>${Element.text}</div>`;
+container.addEventListener("click", (event) => {
+    if (event.target.tagName === "BUTTON") {
+        const id = event.target.dataset.id;
+        completeTask(id);
+    }
+    renderTask();
 });
 
-container.innerHTML = html;
+renderTask();
