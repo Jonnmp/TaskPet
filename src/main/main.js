@@ -50,6 +50,20 @@ ipcMain.on("send-task", (event, taskData) => {
     formWindow.close();
 });
 
+let viewtask;
+
+ipcMain.on("viewtask", () => {
+    viewtask = new BrowserWindow({
+        width: 400,
+        height: 300,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false
+        }
+    });
+    viewtask.loadFile("src/renderer/tasklist.html");
+});
+
 
 app.whenReady().then(() => {
     createWindow();

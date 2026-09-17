@@ -8,6 +8,10 @@ document.getElementById("AddTask_btn").addEventListener("click", () => {
   ipcRenderer.send("open-form");
 });
 
+document.getElementById("ViewTask").addEventListener("click", () => {
+  ipcRenderer.send("viewtask");
+});
+
 mascot.addEventListener("click", () => {
   const pendingCount = getPendingTasks().length;
   let message;
