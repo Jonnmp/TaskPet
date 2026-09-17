@@ -5,8 +5,8 @@ const {getTasks, isTaskDue, markReminded, addTask} = require("../services/TaskMa
 function createWindow() {
 
     const win = new BrowserWindow({
-        width: 260,
-        height: 260,
+        width: 180,
+        height: 300,
         transparent: true,
         frame: false,
         webPreferences: {
@@ -48,6 +48,20 @@ ipcMain.on("open-form", () => {
 ipcMain.on("send-task", (event, taskData) => {
     addTask(taskData);
     formWindow.close();
+});
+
+let viewtask;
+
+ipcMain.on("viewtask", () => {
+    viewtask = new BrowserWindow({
+        width: 400,
+        height: 300,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false
+        }
+    });
+    viewtask.loadFile("src/renderer/tasklist.html");
 });
 
 

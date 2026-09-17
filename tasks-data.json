@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "id": "1789491682585",
+    "text": "Fisica",
+    "createdAt": "2026-09-15T17:01:22.585Z",
+    "reminder": "",
+    "reminderMinutes": 1,
+    "reminderInterval": 0,
+    "completed": true,
+    "reminderFinal": "2026-09-17T04:17:56.353Z"
+  },
+  {
+    "id": "1789619182312",
+    "text": "Quimica",
+    "createdAt": "2026-09-17T04:26:22.312Z",
+    "reminder": "2026-09-16T22:26",
+    "reminderMinutes": 0,
+    "reminderInterval": 0,
+    "completed": true,
+    "reminderFinal": null
+  },
+  {
+    "id": "1789619203636",
+    "text": "Fundamentos",
+    "createdAt": "2026-09-17T04:26:43.636Z",
+    "reminder": "2026-09-16T22:26",
+    "reminderMinutes": 0,
+    "reminderInterval": 0,
+    "completed": true,
+    "reminderFinal": null
+  },
+  {
+    "id": "1789619575508",
+    "text": "Artemis",
+    "createdAt": "2026-09-17T04:32:55.508Z",
+    "reminder": "2026-09-17T04:32",
+    "reminderMinutes": 0,
+    "reminderInterval": 0,
+    "completed": true,
+    "reminderFinal": null
+  },
+  {
+    "id": "1789619712268",
+    "text": "Argumentos",
+    "createdAt": "2026-09-17T04:35:12.268Z",
+    "reminder": "2026-09-16T23:05",
+    "reminderMinutes": 0,
+    "reminderInterval": 0,
+    "completed": true,
+    "reminderFinal": null
+  }
+]

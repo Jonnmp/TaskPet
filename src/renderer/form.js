@@ -3,6 +3,8 @@ const { ipcRenderer } = require("electron");
 const dateModeBtn = document.getElementById("dateModeBtn");
 const minutesModeBtn = document.getElementById("minutesModeBtn");
 const duedate = document.getElementById("duedate");
+const defaultTime = new Date().getTime() + (30 * 60 * 1000) - (new Date().getTimezoneOffset() * 60000);
+duedate.value = new Date(defaultTime).toISOString().slice(0, 16);
 const minutes = document.getElementById("minutes");
 
 dateModeBtn.addEventListener("click", () => {
