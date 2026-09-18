@@ -26,7 +26,7 @@ function saveTasks(tasks) {
 function addTask(dataTasks) {
     const tasks = getTasks();
     const newTask = {
-        id: Date.now().toString(),
+        id: dataTasks.id || Date.now().toString(),
         text: dataTasks.text,
         createdAt: new Date().toISOString(),
         reminder: dataTasks.reminder,

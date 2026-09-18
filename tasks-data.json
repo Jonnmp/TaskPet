@@ -48,5 +48,133 @@
     "reminderInterval": 0,
     "completed": true,
     "reminderFinal": null
+  },
+  {
+    "id": "48363@acad.itsescarcega.edu.mx",
+    "text": "Mapa Conceptual está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.180Z",
+    "reminder": "2026-09-04T05:55:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "49266@acad.itsescarcega.edu.mx",
+    "text": "Práctica Guiada: Despliegue de un Servidor Web LAMP en Google Cloud (Debian) está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.184Z",
+    "reminder": "2026-09-08T15:00:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "50688@acad.itsescarcega.edu.mx",
+    "text": "MAPA CONCEPTUAL está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.190Z",
+    "reminder": "2026-09-09T06:00:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "48362@acad.itsescarcega.edu.mx",
+    "text": "Compendio de Ejercicios está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.193Z",
+    "reminder": "2026-09-11T05:55:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "50565@acad.itsescarcega.edu.mx",
+    "text": "Investigación documental está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.197Z",
+    "reminder": "2026-09-18T06:00:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "50566@acad.itsescarcega.edu.mx",
+    "text": "Ejercicios está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.201Z",
+    "reminder": "2026-09-18T06:00:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "50567@acad.itsescarcega.edu.mx",
+    "text": "Cuadro Comparativo está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.208Z",
+    "reminder": "2026-09-18T06:00:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "52507@acad.itsescarcega.edu.mx",
+    "text": "Resumen:  Datos Abstractos está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.213Z",
+    "reminder": "2026-09-20T05:59:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "52508@acad.itsescarcega.edu.mx",
+    "text": "PRÁCTICA No. 1: Memoria y Tiempo en Algoritmos está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.218Z",
+    "reminder": "2026-09-20T05:59:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "52509@acad.itsescarcega.edu.mx",
+    "text": "Propuesta de PI está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.222Z",
+    "reminder": "2026-09-20T05:59:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "51285@acad.itsescarcega.edu.mx",
+    "text": "EXPOSICIÓN está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.227Z",
+    "reminder": "2026-09-25T06:00:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "51286@acad.itsescarcega.edu.mx",
+    "text": "EJERCICIOS está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.230Z",
+    "reminder": "2026-09-25T06:00:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "51287@acad.itsescarcega.edu.mx",
+    "text": "PRACTICA # 1 SUMA DE VECTORES está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.234Z",
+    "reminder": "2026-09-25T06:00:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "52514@acad.itsescarcega.edu.mx",
+    "text": "Resumen: Recursividad está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.238Z",
+    "reminder": "2026-09-27T05:59:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "52515@acad.itsescarcega.edu.mx",
+    "text": "PRÁCTICA No. 2: Aplicaciones Recursivas está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.242Z",
+    "reminder": "2026-09-27T05:59:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "52516@acad.itsescarcega.edu.mx",
+    "text": "1er Avance PI está en fecha de entrega",
+    "createdAt": "2026-09-18T04:51:56.245Z",
+    "reminder": "2026-09-27T05:59:00.000Z",
+    "completed": false,
+    "reminderFinal": null
   }
 ]

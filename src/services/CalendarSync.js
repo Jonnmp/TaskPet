@@ -1,3 +1,4 @@
+const {addTask, getTasks} = require ("./TaskManager.js");
 const ical = require("node-ical");
 const fs = require("fs");
 const path = require("path");
@@ -11,7 +12,19 @@ async function syncCalendar() {
     console.log(events);
     const eventsArray = Object.values(events);
     const filteredEvents = (eventsArray.filter(event =>  event.type === "VEVENT" && !event.summary.includes("Asistencia")))
-    console.log(filteredEvents)
+    const existingTasks = getTasks();
+
+    filteredEvents.forEach(event => {
+        const yaExiste = existingTasks.some(task => task.id === event.uid);
+
+        if (!yaExiste) {
+            addTask({
+                id: event.uid,
+                text: event.summary,
+                reminder: event.start
+            });
+        }
+    });
 }
 
 syncCalendar();
