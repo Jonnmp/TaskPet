@@ -54,7 +54,7 @@
     "text": "Mapa Conceptual está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.180Z",
     "reminder": "2026-09-04T05:55:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {
@@ -62,7 +62,7 @@
     "text": "Práctica Guiada: Despliegue de un Servidor Web LAMP en Google Cloud (Debian) está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.184Z",
     "reminder": "2026-09-08T15:00:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {
@@ -70,7 +70,7 @@
     "text": "MAPA CONCEPTUAL está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.190Z",
     "reminder": "2026-09-09T06:00:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {
@@ -78,7 +78,7 @@
     "text": "Compendio de Ejercicios está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.193Z",
     "reminder": "2026-09-11T05:55:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {
@@ -86,7 +86,7 @@
     "text": "Investigación documental está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.197Z",
     "reminder": "2026-09-18T06:00:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {
@@ -102,7 +102,7 @@
     "text": "Cuadro Comparativo está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.208Z",
     "reminder": "2026-09-18T06:00:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {
@@ -110,7 +110,7 @@
     "text": "Resumen:  Datos Abstractos está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.213Z",
     "reminder": "2026-09-20T05:59:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {
@@ -118,7 +118,7 @@
     "text": "PRÁCTICA No. 1: Memoria y Tiempo en Algoritmos está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.218Z",
     "reminder": "2026-09-20T05:59:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {

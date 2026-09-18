@@ -9,7 +9,6 @@ async function syncCalendar() {
     const configData = fs.readFileSync(calendarPath, "utf-8");
     const config = JSON.parse(configData)
     const events = await ical.async.fromURL(config.icsURL)
-    console.log(events);
     const eventsArray = Object.values(events);
     const filteredEvents = (eventsArray.filter(event =>  event.type === "VEVENT" && !event.summary.includes("Asistencia")))
     const existingTasks = getTasks();
@@ -27,4 +26,4 @@ async function syncCalendar() {
     });
 }
 
-syncCalendar();
+module.exports = { syncCalendar };

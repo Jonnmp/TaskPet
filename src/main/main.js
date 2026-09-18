@@ -1,5 +1,6 @@
 const { app, BrowserWindow, Notification, ipcMain} = require ('electron');
 const {getTasks, isTaskDue, markReminded, addTask} = require("../services/TaskManager.js");
+const { syncCalendar } = require('../services/CalendarSync.js');
 
 
 function createWindow() {
@@ -68,4 +69,6 @@ ipcMain.on("viewtask", () => {
 app.whenReady().then(() => {
     createWindow();
     setInterval(checkReminders, 60000);
+    syncCalendar();
+    setInterval(syncCalendar, 15 * 24 * 60 * 60 * 1000)
 });
