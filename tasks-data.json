@@ -94,8 +94,8 @@
     "text": "Ejercicios está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.201Z",
     "reminder": "2026-09-18T06:00:00.000Z",
-    "completed": false,
-    "reminderFinal": null
+    "completed": true,
+    "reminderFinal": "2026-09-18T23:49:42.537Z"
   },
   {
     "id": "50567@acad.itsescarcega.edu.mx",
@@ -126,7 +126,7 @@
     "text": "Propuesta de PI está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.222Z",
     "reminder": "2026-09-20T05:59:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {
@@ -134,7 +134,7 @@
     "text": "EXPOSICIÓN está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.227Z",
     "reminder": "2026-09-25T06:00:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {
@@ -142,7 +142,7 @@
     "text": "EJERCICIOS está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.230Z",
     "reminder": "2026-09-25T06:00:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {
@@ -150,7 +150,7 @@
     "text": "PRACTICA # 1 SUMA DE VECTORES está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.234Z",
     "reminder": "2026-09-25T06:00:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {
@@ -158,7 +158,7 @@
     "text": "Resumen: Recursividad está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.238Z",
     "reminder": "2026-09-27T05:59:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {
@@ -166,7 +166,7 @@
     "text": "PRÁCTICA No. 2: Aplicaciones Recursivas está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.242Z",
     "reminder": "2026-09-27T05:59:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   },
   {
@@ -174,7 +174,7 @@
     "text": "1er Avance PI está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.245Z",
     "reminder": "2026-09-27T05:59:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": null
   }
 ]

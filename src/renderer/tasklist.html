@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tareas</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #F0F0F0;
+            padding: 16px;
+        }
+        h2 {
+            color: #54585A;
+        }
+        .task-card {
+            background: white;
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .complete-btn {
+            background: #54585A;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 6px 12px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .complete-btn:hover {
+            background: #3d4042;
+        }     
+    </style>
 </head>
 <body>
+    <h2>Tareas Pendientes</h2>
     <div id="TaskList-container"></div>
     <script src="./tasklist.js"></script>
 </body>

@@ -4,9 +4,18 @@ const container = document.getElementById("TaskList-container");
 
 function renderTask () {
     const tasks = getPendingTasks();
+
+    if (tasks.length === 0) {
+        container.innerHTML = "No tienes tareas pendientes 🎉";
+        return;
+    }
+    
     let html = "";
     tasks.forEach(element => {
-        html += `<div>${element.text} <button data-id="${element.id}">Completar</button></div>`;
+        html += `<div class="task-card">
+            <span>${element.text}</span>
+            <button class="complete-btn" data-id="${element.id}">Completar</button>
+        </div>`;
     });
     container.innerHTML = html;
 }
