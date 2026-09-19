@@ -1,10 +1,6 @@
 const { getTasks, completeTask } = require("../services/TaskManager.js");
 
-const tasks = getTasks();
-console.log("Tareas actuales:", tasks);
+const completedTasks = getTasks().filter(task => task.completed === true);
+completedTasks.forEach(task => completeTask(task.id));
 
-if (tasks.length > 0) {
-    const primeraTarea = tasks[0];
-    const resultado = completeTask(primeraTarea.id);
-    console.log("Tarea marcada como completada:", resultado);
-}
+console.log(`Se revirtieron ${completedTasks.length} tareas.`);

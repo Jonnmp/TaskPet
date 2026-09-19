@@ -112,6 +112,13 @@ function getPendingTasks() {
     const pending = tasks.filter(task => task.completed === false);
     return pending;
 }
+
+function getCompletedTasks() {
+    const tasks = getTasks();
+    const completed = tasks.filter(task => task.completed === true);
+    return completed;
+}
+
 module.exports = {
     getTasks,
     addTask,
@@ -121,5 +128,6 @@ module.exports = {
     getNextReminderTime,
     isTaskDue,
     markReminded,
-    getPendingTasks
+    getPendingTasks,
+    getCompletedTasks
 };

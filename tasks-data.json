@@ -6,7 +6,7 @@
     "reminder": "",
     "reminderMinutes": 1,
     "reminderInterval": 0,
-    "completed": true,
+    "completed": false,
     "reminderFinal": "2026-09-17T04:17:56.353Z"
   },
   {
@@ -16,7 +16,7 @@
     "reminder": "2026-09-16T22:26",
     "reminderMinutes": 0,
     "reminderInterval": 0,
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -26,17 +26,7 @@
     "reminder": "2026-09-16T22:26",
     "reminderMinutes": 0,
     "reminderInterval": 0,
-    "completed": true,
-    "reminderFinal": null
-  },
-  {
-    "id": "1789619575508",
-    "text": "Artemis",
-    "createdAt": "2026-09-17T04:32:55.508Z",
-    "reminder": "2026-09-17T04:32",
-    "reminderMinutes": 0,
-    "reminderInterval": 0,
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -46,7 +36,7 @@
     "reminder": "2026-09-16T23:05",
     "reminderMinutes": 0,
     "reminderInterval": 0,
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -54,7 +44,7 @@
     "text": "Mapa Conceptual está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.180Z",
     "reminder": "2026-09-04T05:55:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -62,7 +52,7 @@
     "text": "Práctica Guiada: Despliegue de un Servidor Web LAMP en Google Cloud (Debian) está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.184Z",
     "reminder": "2026-09-08T15:00:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -70,7 +60,7 @@
     "text": "MAPA CONCEPTUAL está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.190Z",
     "reminder": "2026-09-09T06:00:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -78,7 +68,7 @@
     "text": "Compendio de Ejercicios está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.193Z",
     "reminder": "2026-09-11T05:55:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -86,7 +76,7 @@
     "text": "Investigación documental está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.197Z",
     "reminder": "2026-09-18T06:00:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -94,7 +84,7 @@
     "text": "Ejercicios está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.201Z",
     "reminder": "2026-09-18T06:00:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": "2026-09-18T23:49:42.537Z"
   },
   {
@@ -102,7 +92,7 @@
     "text": "Cuadro Comparativo está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.208Z",
     "reminder": "2026-09-18T06:00:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -110,7 +100,7 @@
     "text": "Resumen:  Datos Abstractos está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.213Z",
     "reminder": "2026-09-20T05:59:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -118,7 +108,7 @@
     "text": "PRÁCTICA No. 1: Memoria y Tiempo en Algoritmos está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.218Z",
     "reminder": "2026-09-20T05:59:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -126,7 +116,7 @@
     "text": "Propuesta de PI está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.222Z",
     "reminder": "2026-09-20T05:59:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -134,7 +124,7 @@
     "text": "EXPOSICIÓN está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.227Z",
     "reminder": "2026-09-25T06:00:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -142,7 +132,7 @@
     "text": "EJERCICIOS está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.230Z",
     "reminder": "2026-09-25T06:00:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -150,7 +140,7 @@
     "text": "PRACTICA # 1 SUMA DE VECTORES está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.234Z",
     "reminder": "2026-09-25T06:00:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -158,7 +148,7 @@
     "text": "Resumen: Recursividad está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.238Z",
     "reminder": "2026-09-27T05:59:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -166,7 +156,7 @@
     "text": "PRÁCTICA No. 2: Aplicaciones Recursivas está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.242Z",
     "reminder": "2026-09-27T05:59:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   },
   {
@@ -174,7 +164,7 @@
     "text": "1er Avance PI está en fecha de entrega",
     "createdAt": "2026-09-18T04:51:56.245Z",
     "reminder": "2026-09-27T05:59:00.000Z",
-    "completed": true,
+    "completed": false,
     "reminderFinal": null
   }
 ]
