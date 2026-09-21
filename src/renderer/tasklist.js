@@ -13,8 +13,13 @@ function renderTask () {
     let html = "";
     tasks.forEach(element => {
         html += `<div class="task-card">
-            <span>${element.text}</span>
-            <button class="complete-btn" data-id="${element.id}">Completar</button>
+            <div class="task-main">
+                <span class="task-text" data-id="${element.id}">${element.text}</span>
+                <button class="complete-btn" data-id="${element.id}">Completar</button>
+            </div>
+            <div class="task-details" style="display: none;">
+                ${element.description || "Sin descripcion disponible."}
+            </div>
         </div>`;
     });
     container.innerHTML = html;
@@ -24,8 +29,19 @@ container.addEventListener("click", (event) => {
     if (event.target.tagName === "BUTTON") {
         const id = event.target.dataset.id;
         completeTask(id);
-    }
-    renderTask();
+        renderTask();
+        renderCompleted();
+    } else if (event.target.classList.contains("task-text")) {
+        const card = event.target.closest(".task-card");
+        const details = card.querySelector(".task-details");
+
+        if (details.style.display === "none") {
+            details.style.display = "block"
+        } else {
+            details.style.display = "none";
+        } 
+    }   
+
 });
 
 renderTask();
