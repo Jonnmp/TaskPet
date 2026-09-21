@@ -1,128 +1,99 @@
 [
   {
-    "id": "1789491682585",
-    "text": "Fisica",
-    "createdAt": "2026-09-15T17:01:22.585Z",
-    "reminder": "",
-    "reminderMinutes": 1,
-    "reminderInterval": 0,
-    "completed": false,
-    "reminderFinal": "2026-09-17T04:17:56.353Z"
-  },
-  {
-    "id": "1789619182312",
-    "text": "Quimica",
-    "createdAt": "2026-09-17T04:26:22.312Z",
-    "reminder": "2026-09-16T22:26",
-    "reminderMinutes": 0,
-    "reminderInterval": 0,
-    "completed": false,
-    "reminderFinal": null
-  },
-  {
-    "id": "1789619203636",
-    "text": "Fundamentos",
-    "createdAt": "2026-09-17T04:26:43.636Z",
-    "reminder": "2026-09-16T22:26",
-    "reminderMinutes": 0,
-    "reminderInterval": 0,
-    "completed": false,
-    "reminderFinal": null
-  },
-  {
-    "id": "1789619712268",
-    "text": "Argumentos",
-    "createdAt": "2026-09-17T04:35:12.268Z",
-    "reminder": "2026-09-16T23:05",
-    "reminderMinutes": 0,
-    "reminderInterval": 0,
-    "completed": false,
-    "reminderFinal": null
-  },
-  {
     "id": "48363@acad.itsescarcega.edu.mx",
     "text": "Mapa Conceptual está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.180Z",
+    "description": "Realiza un mapa conceptual [1] de los temas de la unidad, en trinas, en formato digital PDF, subir a la plataforma Moodle. \n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=18972\n",
+    "createdAt": "2026-09-21T01:40:12.116Z",
     "reminder": "2026-09-04T05:55:00.000Z",
     "completed": false,
-    "reminderFinal": null
+    "reminderFinal": "2026-09-21T01:42:21.119Z"
   },
   {
     "id": "49266@acad.itsescarcega.edu.mx",
     "text": "Práctica Guiada: Despliegue de un Servidor Web LAMP en Google Cloud (Debian) está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.184Z",
+    "description": "",
+    "createdAt": "2026-09-21T01:40:12.125Z",
     "reminder": "2026-09-08T15:00:00.000Z",
     "completed": false,
-    "reminderFinal": null
+    "reminderFinal": "2026-09-21T01:42:21.146Z"
   },
   {
     "id": "50688@acad.itsescarcega.edu.mx",
     "text": "MAPA CONCEPTUAL está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.190Z",
+    "description": "Elabora en equipo un mapa conceptual [1] sobre los conceptos fundamentales de la estática. Convierte el trabajo en PDF y súbelo a la plataforma institucional (Teams, Moodle o Drive).\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19550\n",
+    "createdAt": "2026-09-21T01:40:12.130Z",
     "reminder": "2026-09-09T06:00:00.000Z",
     "completed": false,
-    "reminderFinal": null
+    "reminderFinal": "2026-09-21T01:42:21.172Z"
   },
   {
     "id": "48362@acad.itsescarcega.edu.mx",
     "text": "Compendio de Ejercicios está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.193Z",
+    "description": "Resuelve compendio de ejercicios [1], de manera individual, en libreta de trabajo, en formato digital PDF, subir a la plataforma Moodle. \n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=18973\n",
+    "createdAt": "2026-09-21T01:40:12.134Z",
     "reminder": "2026-09-11T05:55:00.000Z",
     "completed": false,
-    "reminderFinal": null
+    "reminderFinal": "2026-09-21T01:42:21.196Z"
   },
   {
     "id": "50565@acad.itsescarcega.edu.mx",
     "text": "Investigación documental está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.197Z",
+    "description": "Solicita a los/as estudiantes de manera individual en la libreta una investigación documental [1] sobre la evolución de los modelos atómicos, teoría cuántica\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19515\n",
+    "createdAt": "2026-09-21T01:40:12.139Z",
     "reminder": "2026-09-18T06:00:00.000Z",
     "completed": false,
-    "reminderFinal": null
+    "reminderFinal": "2026-09-21T01:42:21.221Z"
   },
   {
     "id": "50566@acad.itsescarcega.edu.mx",
     "text": "Ejercicios está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.201Z",
+    "description": "Solicita a las/los estudiantes ejercicios [1] correspondiente de los subtemas 1.4.3.2 de manera individual deberá elaborarse en la libreta, posteriormente escanearse en formato PDF y subirlo a la plataforma Moodle\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19516\n",
+    "createdAt": "2026-09-21T01:40:12.144Z",
     "reminder": "2026-09-18T06:00:00.000Z",
     "completed": false,
-    "reminderFinal": "2026-09-18T23:49:42.537Z"
+    "reminderFinal": "2026-09-21T01:42:21.264Z"
   },
   {
     "id": "50567@acad.itsescarcega.edu.mx",
     "text": "Cuadro Comparativo está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.208Z",
+    "description": "Solicita un Cuadro Comparativo [1] en idioma inglés de los subtemas 1.2.1,1.3,1.3.1,1.4 de manera digital sobre los átomos y sus teorías, posteriormente escanearse en formato PDF y subirlo a la plataforma Moodle\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19517\n",
+    "createdAt": "2026-09-21T01:40:12.148Z",
     "reminder": "2026-09-18T06:00:00.000Z",
     "completed": false,
-    "reminderFinal": null
+    "reminderFinal": "2026-09-21T01:42:21.318Z"
   },
   {
     "id": "52507@acad.itsescarcega.edu.mx",
     "text": "Resumen:  Datos Abstractos está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.213Z",
+    "description": "Realiza un resumen sobre el concepto de los tipos de datos abstractos y su implementación en la programación orientada a objetos. La actividad deberá ser entregada de manera individual a través de la plataforma Moodle en formato PDF.\n",
+    "createdAt": "2026-09-21T01:40:12.153Z",
     "reminder": "2026-09-20T05:59:00.000Z",
     "completed": false,
-    "reminderFinal": null
+    "reminderFinal": "2026-09-21T01:42:21.355Z"
   },
   {
     "id": "52508@acad.itsescarcega.edu.mx",
     "text": "PRÁCTICA No. 1: Memoria y Tiempo en Algoritmos está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.218Z",
+    "description": "Discute en plenaria las diferencias entre el manejo de memoria estática y dinámica, así como ventajas y desventajas. Codifica un programa para la generación de vectores en tiempo de ejecución. La actividad deberá ser entregada de manera individual a través de la plataforma Moodle en formato PDF.\n\n📸 ANEXAR EVIDENCIA FOTOGRÁFICA.\n",
+    "createdAt": "2026-09-21T01:40:12.158Z",
     "reminder": "2026-09-20T05:59:00.000Z",
     "completed": false,
-    "reminderFinal": null
+    "reminderFinal": "2026-09-21T01:42:21.407Z"
   },
   {
     "id": "52509@acad.itsescarcega.edu.mx",
     "text": "Propuesta de PI está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.222Z",
+    "description": "Con base en la ficha del proyecto integrador y el cronograma de actividades, el estudiante elabora la propuesta de proyecto.\n",
+    "createdAt": "2026-09-21T01:40:12.164Z",
     "reminder": "2026-09-20T05:59:00.000Z",
     "completed": false,
-    "reminderFinal": null
+    "reminderFinal": "2026-09-21T01:42:21.461Z"
   },
   {
     "id": "51285@acad.itsescarcega.edu.mx",
     "text": "EXPOSICIÓN está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.227Z",
+    "description": "Realiza en clases de manera individual y en su libreta de trabajo ejercicios [1] de los temas 1.1-1.6.\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19828\n",
+    "createdAt": "2026-09-21T01:40:12.170Z",
     "reminder": "2026-09-25T06:00:00.000Z",
     "completed": false,
     "reminderFinal": null
@@ -130,7 +101,8 @@
   {
     "id": "51286@acad.itsescarcega.edu.mx",
     "text": "EJERCICIOS está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.230Z",
+    "description": "Realiza en clases de manera individual y en su libreta de trabajo ejercicios [1] de los temas 1.1-1.6.\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19828\n",
+    "createdAt": "2026-09-21T01:40:12.175Z",
     "reminder": "2026-09-25T06:00:00.000Z",
     "completed": false,
     "reminderFinal": null
@@ -138,7 +110,8 @@
   {
     "id": "51287@acad.itsescarcega.edu.mx",
     "text": "PRACTICA # 1 SUMA DE VECTORES está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.234Z",
+    "description": "Realiza practica # 1 “Suma de vectores”, de manera individual y realiza reporte escrito de la misma en formato pdf.\n",
+    "createdAt": "2026-09-21T01:40:12.183Z",
     "reminder": "2026-09-25T06:00:00.000Z",
     "completed": false,
     "reminderFinal": null
@@ -146,7 +119,8 @@
   {
     "id": "52514@acad.itsescarcega.edu.mx",
     "text": "Resumen: Recursividad está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.238Z",
+    "description": "Redacta una definición propia del concepto de recursividad después de consultar en diferentes fuentes bibliográficas y comentarla en clase. Enumera las ventajas y desventajas del uso de la recursividad en una plenaria. La actividad deberá ser entregada de manera individual en el sistema web Moodle en formato PDF.\n",
+    "createdAt": "2026-09-21T01:40:12.188Z",
     "reminder": "2026-09-27T05:59:00.000Z",
     "completed": false,
     "reminderFinal": null
@@ -154,7 +128,8 @@
   {
     "id": "52515@acad.itsescarcega.edu.mx",
     "text": "PRÁCTICA No. 2: Aplicaciones Recursivas está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.242Z",
+    "description": "Desarrolla programas en los cuales se aplique la recursividad y entregar informe. La actividad deberá ser entregada de manera individual en el sistema web Moodle en formato PDF.\n\n📸 ANEXAR EVIDENCIA FOTOGRÁFICA.\n",
+    "createdAt": "2026-09-21T01:40:12.193Z",
     "reminder": "2026-09-27T05:59:00.000Z",
     "completed": false,
     "reminderFinal": null
@@ -162,7 +137,8 @@
   {
     "id": "52516@acad.itsescarcega.edu.mx",
     "text": "1er Avance PI está en fecha de entrega",
-    "createdAt": "2026-09-18T04:51:56.245Z",
+    "description": "Con base en la ficha del proyecto integrador y el cronograma de actividades, el estudiante elabora el primer avance.\n",
+    "createdAt": "2026-09-21T01:40:12.200Z",
     "reminder": "2026-09-27T05:59:00.000Z",
     "completed": false,
     "reminderFinal": null

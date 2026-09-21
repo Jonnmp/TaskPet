@@ -28,6 +28,7 @@ function addTask(dataTasks) {
     const newTask = {
         id: dataTasks.id || Date.now().toString(),
         text: dataTasks.text,
+        description: dataTasks.description,
         createdAt: new Date().toISOString(),
         reminder: dataTasks.reminder,
         reminderMinutes: dataTasks.reminderMinutes,
@@ -118,6 +119,7 @@ function getCompletedTasks() {
     const completed = tasks.filter(task => task.completed === true);
     return completed;
 }
+
 
 module.exports = {
     getTasks,

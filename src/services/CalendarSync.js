@@ -20,6 +20,7 @@ async function syncCalendar() {
             addTask({
                 id: event.uid,
                 text: event.summary,
+                description: event.description,
                 reminder: event.start
             });
         }
@@ -27,3 +28,4 @@ async function syncCalendar() {
 }
 
 module.exports = { syncCalendar };
+
