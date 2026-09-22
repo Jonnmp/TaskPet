@@ -1,50 +1,5 @@
 [
   {
-    "id": "48363@acad.itsescarcega.edu.mx",
-    "text": "Mapa Conceptual está en fecha de entrega",
-    "description": "Realiza un mapa conceptual [1] de los temas de la unidad, en trinas, en formato digital PDF, subir a la plataforma Moodle. \n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=18972\n",
-    "createdAt": "2026-09-21T01:40:12.116Z",
-    "reminder": "2026-09-04T05:55:00.000Z",
-    "completed": false,
-    "reminderFinal": "2026-09-21T01:42:21.119Z"
-  },
-  {
-    "id": "49266@acad.itsescarcega.edu.mx",
-    "text": "Práctica Guiada: Despliegue de un Servidor Web LAMP en Google Cloud (Debian) está en fecha de entrega",
-    "description": "",
-    "createdAt": "2026-09-21T01:40:12.125Z",
-    "reminder": "2026-09-08T15:00:00.000Z",
-    "completed": false,
-    "reminderFinal": "2026-09-21T01:42:21.146Z"
-  },
-  {
-    "id": "50688@acad.itsescarcega.edu.mx",
-    "text": "MAPA CONCEPTUAL está en fecha de entrega",
-    "description": "Elabora en equipo un mapa conceptual [1] sobre los conceptos fundamentales de la estática. Convierte el trabajo en PDF y súbelo a la plataforma institucional (Teams, Moodle o Drive).\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19550\n",
-    "createdAt": "2026-09-21T01:40:12.130Z",
-    "reminder": "2026-09-09T06:00:00.000Z",
-    "completed": false,
-    "reminderFinal": "2026-09-21T01:42:21.172Z"
-  },
-  {
-    "id": "48362@acad.itsescarcega.edu.mx",
-    "text": "Compendio de Ejercicios está en fecha de entrega",
-    "description": "Resuelve compendio de ejercicios [1], de manera individual, en libreta de trabajo, en formato digital PDF, subir a la plataforma Moodle. \n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=18973\n",
-    "createdAt": "2026-09-21T01:40:12.134Z",
-    "reminder": "2026-09-11T05:55:00.000Z",
-    "completed": false,
-    "reminderFinal": "2026-09-21T01:42:21.196Z"
-  },
-  {
-    "id": "50565@acad.itsescarcega.edu.mx",
-    "text": "Investigación documental está en fecha de entrega",
-    "description": "Solicita a los/as estudiantes de manera individual en la libreta una investigación documental [1] sobre la evolución de los modelos atómicos, teoría cuántica\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19515\n",
-    "createdAt": "2026-09-21T01:40:12.139Z",
-    "reminder": "2026-09-18T06:00:00.000Z",
-    "completed": false,
-    "reminderFinal": "2026-09-21T01:42:21.221Z"
-  },
-  {
     "id": "50566@acad.itsescarcega.edu.mx",
     "text": "Ejercicios está en fecha de entrega",
     "description": "Solicita a las/los estudiantes ejercicios [1] correspondiente de los subtemas 1.4.3.2 de manera individual deberá elaborarse en la libreta, posteriormente escanearse en formato PDF y subirlo a la plataforma Moodle\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19516\n",
@@ -52,15 +7,6 @@
     "reminder": "2026-09-18T06:00:00.000Z",
     "completed": false,
     "reminderFinal": "2026-09-21T01:42:21.264Z"
-  },
-  {
-    "id": "50567@acad.itsescarcega.edu.mx",
-    "text": "Cuadro Comparativo está en fecha de entrega",
-    "description": "Solicita un Cuadro Comparativo [1] en idioma inglés de los subtemas 1.2.1,1.3,1.3.1,1.4 de manera digital sobre los átomos y sus teorías, posteriormente escanearse en formato PDF y subirlo a la plataforma Moodle\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19517\n",
-    "createdAt": "2026-09-21T01:40:12.148Z",
-    "reminder": "2026-09-18T06:00:00.000Z",
-    "completed": false,
-    "reminderFinal": "2026-09-21T01:42:21.318Z"
   },
   {
     "id": "52507@acad.itsescarcega.edu.mx",
@@ -135,11 +81,101 @@
     "reminderFinal": null
   },
   {
+    "id": "48363@acad.itsescarcega.edu.mx",
+    "text": "Mapa Conceptual está en fecha de entrega",
+    "description": "Realiza un mapa conceptual [1] de los temas de la unidad, en trinas, en formato digital PDF, subir a la plataforma Moodle. \n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=18972\n",
+    "createdAt": "2026-09-21T16:20:25.890Z",
+    "reminder": "2026-09-04T05:55:00.000Z",
+    "completed": false,
+    "reminderFinal": "2026-09-21T19:51:54.468Z"
+  },
+  {
+    "id": "49266@acad.itsescarcega.edu.mx",
+    "text": "Práctica Guiada: Despliegue de un Servidor Web LAMP en Google Cloud (Debian) está en fecha de entrega",
+    "description": "",
+    "createdAt": "2026-09-21T16:20:25.909Z",
+    "reminder": "2026-09-08T15:00:00.000Z",
+    "completed": false,
+    "reminderFinal": "2026-09-21T19:51:54.528Z"
+  },
+  {
+    "id": "50688@acad.itsescarcega.edu.mx",
+    "text": "MAPA CONCEPTUAL está en fecha de entrega",
+    "description": "Elabora en equipo un mapa conceptual [1] sobre los conceptos fundamentales de la estática. Convierte el trabajo en PDF y súbelo a la plataforma institucional (Teams, Moodle o Drive).\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19550\n",
+    "createdAt": "2026-09-21T16:20:25.918Z",
+    "reminder": "2026-09-09T06:00:00.000Z",
+    "completed": false,
+    "reminderFinal": "2026-09-21T19:51:54.585Z"
+  },
+  {
+    "id": "48362@acad.itsescarcega.edu.mx",
+    "text": "Compendio de Ejercicios está en fecha de entrega",
+    "description": "Resuelve compendio de ejercicios [1], de manera individual, en libreta de trabajo, en formato digital PDF, subir a la plataforma Moodle. \n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=18973\n",
+    "createdAt": "2026-09-21T16:20:25.928Z",
+    "reminder": "2026-09-11T05:55:00.000Z",
+    "completed": false,
+    "reminderFinal": "2026-09-21T19:51:54.623Z"
+  },
+  {
+    "id": "50565@acad.itsescarcega.edu.mx",
+    "text": "Investigación documental está en fecha de entrega",
+    "description": "Solicita a los/as estudiantes de manera individual en la libreta una investigación documental [1] sobre la evolución de los modelos atómicos, teoría cuántica\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19515\n",
+    "createdAt": "2026-09-21T16:20:25.938Z",
+    "reminder": "2026-09-18T06:00:00.000Z",
+    "completed": false,
+    "reminderFinal": "2026-09-21T19:51:54.670Z"
+  },
+  {
+    "id": "50567@acad.itsescarcega.edu.mx",
+    "text": "Cuadro Comparativo está en fecha de entrega",
+    "description": "Solicita un Cuadro Comparativo [1] en idioma inglés de los subtemas 1.2.1,1.3,1.3.1,1.4 de manera digital sobre los átomos y sus teorías, posteriormente escanearse en formato PDF y subirlo a la plataforma Moodle\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19517\n",
+    "createdAt": "2026-09-21T16:20:25.952Z",
+    "reminder": "2026-09-18T06:00:00.000Z",
+    "completed": false,
+    "reminderFinal": "2026-09-21T19:51:54.715Z"
+  },
+  {
     "id": "52516@acad.itsescarcega.edu.mx",
     "text": "1er Avance PI está en fecha de entrega",
     "description": "Con base en la ficha del proyecto integrador y el cronograma de actividades, el estudiante elabora el primer avance.\n",
-    "createdAt": "2026-09-21T01:40:12.200Z",
+    "createdAt": "2026-09-21T16:20:25.964Z",
     "reminder": "2026-09-27T05:59:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "54491@acad.itsescarcega.edu.mx",
+    "text": "Examen Teórico-Práctico (AE1, CD1.1) abre",
+    "description": "",
+    "createdAt": "2026-09-21T19:50:57.178Z",
+    "reminder": "2026-09-21T06:39:00.000Z",
+    "completed": false,
+    "reminderFinal": "2026-09-21T19:51:54.754Z"
+  },
+  {
+    "id": "54492@acad.itsescarcega.edu.mx",
+    "text": "Examen Teórico-Práctico (AE1, CD1.1) cierra",
+    "description": "",
+    "createdAt": "2026-09-21T19:50:57.357Z",
+    "reminder": "2026-09-21T23:00:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "54661@acad.itsescarcega.edu.mx",
+    "text": "Software de Algoritmos / 1er Avance (AE1, CD1.1) está en fecha de entrega",
+    "description": "El trabajo realizado en Turso, agreguen información sobre esa plataforma y como puede ayudar en el trabajo de un ISC.\n\nFecha de corte  22 sep 2026 19:00\n",
+    "createdAt": "2026-09-22T23:16:22.565Z",
+    "reminder": "2026-09-22T23:00:00.000Z",
+    "completed": false,
+    "reminderFinal": null
+  },
+  {
+    "id": "54662@acad.itsescarcega.edu.mx",
+    "text": "Problemario de Métodos (AE1, CD1.1) está en fecha de entrega",
+    "description": "El trabajo realizado en google colab, se realiza un informe y se sube en pdf, no olvidar poner publico su link de colab.\n",
+    "createdAt": "2026-09-22T23:16:22.585Z",
+    "reminder": "2026-09-22T23:00:00.000Z",
     "completed": false,
     "reminderFinal": null
   }

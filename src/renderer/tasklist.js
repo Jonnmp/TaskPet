@@ -10,15 +10,21 @@ function renderTask () {
         return;
     }
 
+    const urlPattern = /https?:\/\/[^\s]+/;
     let html = "";
     tasks.forEach(element => {
+        const match = (element.description || "").match(urlPattern);
+        const url = match ? match[0]:null;
+        const cleanDescription = (element.description || "").replace(urlPattern, "");
+
         html += `<div class="task-card">
             <div class="task-main">
                 <span class="task-text" data-id="${element.id}">${element.text}</span>
                 <button class="complete-btn" data-id="${element.id}">Completar</button>
             </div>
             <div class="task-details" style="display: none;">
-                ${element.description || "Sin descripcion disponible."}
+                ${cleanDescription || "Sin descripcion disponible."}
+                ${url ? `<button class="moodle-link" data-url="${url}">Ver en Moodle 🔗</button>` : ""}
             </div>
         </div>`;
     });
@@ -26,7 +32,7 @@ function renderTask () {
 }
 
 container.addEventListener("click", (event) => {
-    if (event.target.tagName === "BUTTON") {
+    if (event.target.classList.contains("complete-btn")) {
         const id = event.target.dataset.id;
         completeTask(id);
         renderTask();
@@ -40,8 +46,10 @@ container.addEventListener("click", (event) => {
         } else {
             details.style.display = "none";
         } 
-    }   
-
+    } else if (event.target.classList.contains("moodle-link")) {
+        const url = event.target.dataset.url;
+        console.log(url);
+    } 
 });
 
 renderTask();
