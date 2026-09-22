@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Notification, ipcMain} = require ('electron');
+const { app, BrowserWindow, Notification, ipcMain, shell} = require ('electron');
 const {getTasks, isTaskDue, markReminded, addTask} = require("../services/TaskManager.js");
 const { syncCalendar } = require('../services/CalendarSync.js');
 
@@ -72,3 +72,7 @@ app.whenReady().then(() => {
     syncCalendar();
     setInterval(syncCalendar, 15 * 24 * 60 * 60 * 1000)
 });
+
+ipcMain.on("open-external-link", (event, url) => {
+    shell.openExternal(url)
+})

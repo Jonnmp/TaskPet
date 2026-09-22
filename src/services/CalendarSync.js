@@ -25,8 +25,7 @@ async function syncCalendar() {
             });
         }
     });
-    console.log(filteredEvents[0])
 }
 
 module.exports = { syncCalendar };
-syncCalendar();
+

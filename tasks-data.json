@@ -5,7 +5,7 @@
     "description": "Solicita a las/los estudiantes ejercicios [1] correspondiente de los subtemas 1.4.3.2 de manera individual deberá elaborarse en la libreta, posteriormente escanearse en formato PDF y subirlo a la plataforma Moodle\n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=19516\n",
     "createdAt": "2026-09-21T01:40:12.144Z",
     "reminder": "2026-09-18T06:00:00.000Z",
-    "completed": false,
+    "completed": true,
     "reminderFinal": "2026-09-21T01:42:21.264Z"
   },
   {
@@ -159,7 +159,7 @@
     "createdAt": "2026-09-21T19:50:57.357Z",
     "reminder": "2026-09-21T23:00:00.000Z",
     "completed": false,
-    "reminderFinal": null
+    "reminderFinal": "2026-09-22T23:51:45.236Z"
   },
   {
     "id": "54661@acad.itsescarcega.edu.mx",
@@ -168,7 +168,7 @@
     "createdAt": "2026-09-22T23:16:22.565Z",
     "reminder": "2026-09-22T23:00:00.000Z",
     "completed": false,
-    "reminderFinal": null
+    "reminderFinal": "2026-09-22T23:51:45.255Z"
   },
   {
     "id": "54662@acad.itsescarcega.edu.mx",
@@ -177,6 +177,6 @@
     "createdAt": "2026-09-22T23:16:22.585Z",
     "reminder": "2026-09-22T23:00:00.000Z",
     "completed": false,
-    "reminderFinal": null
+    "reminderFinal": "2026-09-22T23:51:45.269Z"
   }
 ]
