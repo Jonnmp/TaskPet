@@ -82,10 +82,16 @@
   background: #54585a;
   color: white;
   border: none;
-  border-radius: 8px;
-  padding: 8px 14px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
+  }
+  .button-row {
+    display: flex;
+    gap: 10px;
+    -webkit-app-region: no-drag;
   }
 </style>
 </head>
@@ -96,8 +102,10 @@
     <div class="mouth"></div>
     <div class="speech-bubble" id="speechBubble"></div>
   </div>
-  <button id="AddTask_btn">Agregar Tarea</button>
-  <button id="ViewTask">Ver Tareas</button>
+  <div  class = "button-row">
+    <button id="AddTask_btn">➕</button>
+    <button id="ViewTask">📋</button>
+  </div>
   <script src="./renderer.js"></script>
 </body>
 </html>
