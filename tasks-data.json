@@ -178,5 +178,14 @@
     "reminder": "2026-09-22T23:00:00.000Z",
     "completed": false,
     "reminderFinal": "2026-09-22T23:51:45.269Z"
+  },
+  {
+    "id": "55782@acad.itsescarcega.edu.mx",
+    "text": "Investigación está en fecha de entrega",
+    "description": "Elabora una investigación [1] de los temas 2.2 al 2.5, de manera individual, en formato digital PDF, subir a la plataforma Moodle. \n\n\nLinks:\n------\n[1] https://acad.itsescarcega.edu.mx/mod/assign/view.php?id=20854\n",
+    "createdAt": "2026-09-24T01:11:09.835Z",
+    "reminder": "2026-09-25T05:55:00.000Z",
+    "completed": false,
+    "reminderFinal": null
   }
 ]
