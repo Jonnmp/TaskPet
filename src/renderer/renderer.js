@@ -13,6 +13,7 @@ document.getElementById("ViewTask").addEventListener("click", () => {
 });
 
 mascot.addEventListener("click", () => {
+  console.log("CLIC DETECTADO");
   const pendingCount = getPendingTasks().length;
   let message;
 
