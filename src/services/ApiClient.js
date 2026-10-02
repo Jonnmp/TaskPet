@@ -12,7 +12,6 @@ async function login(username, password) {
         body: JSON.stringify({ username, password }),
     });
 
-    console.log("Status: ", response.status);
 
     if (!response.ok) {
         throw new Error('Login failed: Usuario o contraseña incorrectos');
@@ -28,11 +27,33 @@ function getAccessToken() {
     return accessToken;
 }
 
+async function createTask(taskData) {
+    const response = await fetch(`${API_BASE_URL}/tasks/`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify(taskData),
+    });
+
+    if (!response.ok) {
+        throw new Error("No se pudo crear la tarea");
+    }
+
+    return await response.json();
+}
+
 module.exports = {
     login,
     getAccessToken,
+    createTask,
 };
 
-login("Jonnmp", "Bx20070225").then(data => {                        
-    console.log("Login exitoso, access token:", data.access.substring(0, 20) + "...");          
-}).catch(err => console.error(err.message));
+async function test() {
+    await login("Jonnmp", "Bx20070225");
+    const nuevaTarea = await createTask({ text: "Tarea creada via API desde Electron" });
+    console.log("Tarea creada:", nuevaTarea);
+}
+
+test();
