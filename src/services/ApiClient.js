@@ -59,10 +59,27 @@ async function getTasks() {
     return await response.json();
 }
 
+async function completeTask(taskId) {
+    const response = await fetch(`${API_BASE_URL}/tasks/${taskId}/`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({ completed: true }),
+    });
+
+    if (!response.ok) {
+        throw new Error("No se pudo completar la tarea");
+    }
+
+    return await response.json();
+}
+
 async function test() {
     await login("Jonnmp", "Bx20070225");
-    const tareas = await getTasks();
-    console.log("Tareas obtenidas:", tareas);
+    const actualizada = await completeTask(1);
+    console.log("Tarea completada:", actualizada);
 }
 
 test();
@@ -72,6 +89,7 @@ module.exports = {
     getAccessToken,
     createTask,
     getTasks,
+    completeTask
 };
 
 
