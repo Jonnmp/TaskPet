@@ -44,16 +44,34 @@ async function createTask(taskData) {
     return await response.json();
 }
 
+async function getTasks() {
+    const response = await fetch(`${API_BASE_URL}/tasks/`, {
+        method: "GET",
+        headers: {
+            "Authorization": `Bearer ${accessToken}`,
+        },
+    });
+
+    if (!response.ok) {
+        throw new Error("No se pudieron obtener las tareas");
+    }
+
+    return await response.json();
+}
+
+async function test() {
+    await login("Jonnmp", "Bx20070225");
+    const tareas = await getTasks();
+    console.log("Tareas obtenidas:", tareas);
+}
+
+test();
+
 module.exports = {
     login,
     getAccessToken,
     createTask,
+    getTasks,
 };
 
-async function test() {
-    await login("Jonnmp", "Bx20070225");
-    const nuevaTarea = await createTask({ text: "Tarea creada via API desde Electron" });
-    console.log("Tarea creada:", nuevaTarea);
-}
 
-test();
