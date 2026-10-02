@@ -76,10 +76,27 @@ async function completeTask(taskId) {
     return await response.json();
 }
 
+async function deleteTask(taskId) {
+    const response = await fetch(`${API_BASE_URL}/tasks/${taskId}/`, {
+        method: "DELETE",
+        headers: {
+            "Authorization": `Bearer ${accessToken}`,
+        },
+    });
+
+    if (!response.ok) {
+        throw new Error("No se pudo eliminar la tarea");
+    }
+
+    return true;
+}
+
 async function test() {
     await login("Jonnmp", "Bx20070225");
-    const actualizada = await completeTask(1);
-    console.log("Tarea completada:", actualizada);
+    const resultado = await deleteTask(2);
+    console.log("Tarea eliminada:", resultado);
+    const tareas = await getTasks();
+    console.log("Tareas restantes:", tareas);
 }
 
 test();
@@ -89,7 +106,8 @@ module.exports = {
     getAccessToken,
     createTask,
     getTasks,
-    completeTask
+    completeTask,
+    deleteTask
 };
 
 
