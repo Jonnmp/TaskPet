@@ -1,6 +1,11 @@
 const { app, BrowserWindow, Notification, ipcMain, shell} = require ('electron');
 const {getTasks, isTaskDue, markReminded, addTask} = require("../services/TaskManager.js");
 const { syncCalendar } = require('../services/CalendarSync.js');
+const fs = require('fs');
+const path = require('path');
+const {login} = require('../services/ApiClient.js');
+
+const authConfigPath = path.join(__dirname, '../../auth-config.json');
 
 
 function createWindow() {
@@ -65,9 +70,16 @@ ipcMain.on("viewtask", () => {
     viewtask.loadFile("src/renderer/tasklist.html");
 });
 
+async function loginWithStoredCredentials() {
+    const configData = fs.readFileSync(authConfigPath, 'utf-8');
+    const { username, password } = JSON.parse(configData);
+    await login(username, password);
+    console.log("Logged in successfully with stored credentials");
+}
 
-app.whenReady().then(() => {
+app.whenReady().then(async () => {
     createWindow();
+    await loginWithStoredCredentials();
     setInterval(checkReminders, 60000);
     syncCalendar();
     setInterval(syncCalendar, 15 * 24 * 60 * 60 * 1000)
