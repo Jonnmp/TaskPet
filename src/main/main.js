@@ -3,8 +3,8 @@ const {getTasks, isTaskDue, markReminded, addTask} = require("../services/TaskMa
 const { syncCalendar } = require('../services/CalendarSync.js');
 const fs = require('fs');
 const path = require('path');
-const {login} = require('../services/ApiClient.js');
-
+const { login, getTasks: getApiTask} = require('../services/ApiClient.js');
+const { adaptApiTask } = require('../services/TaskAdapter.js');
 const authConfigPath = path.join(__dirname, '../../auth-config.json');
 
 
@@ -23,19 +23,6 @@ function createWindow() {
     win.loadFile("src/renderer/index.html");
 }
 
-function checkReminders() {
-    getTasks().forEach(element => {
-        if (isTaskDue(element)) {
-            const notification = new Notification({
-                title: "Task Reminder",
-                body: element.text
-            });
-            notification.show();
-            markReminded(element.id)
-        }
-        
-    });
-} 
 
 let formWindow;
 
@@ -77,6 +64,21 @@ async function loginWithStoredCredentials() {
     console.log("Logged in successfully with stored credentials");
 }
 
+async function checkReminders() {
+    const apiTasks = await getApiTask();
+    const tasks = apiTasks.map(adaptApiTask);
+
+    tasks.forEach(element => {
+        if (isTaskDue(element)) {
+            const notification = new Notification({
+                title: "Task Reminder",
+                body: element.text
+            });
+            notification.show();
+            markReminded(element.id);
+        }
+    });
+}
 app.whenReady().then(async () => {
     createWindow();
     await loginWithStoredCredentials();
