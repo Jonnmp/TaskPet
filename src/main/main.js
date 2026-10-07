@@ -1,9 +1,9 @@
 const { app, BrowserWindow, Notification, ipcMain, shell} = require ('electron');
-const {getTasks, isTaskDue, markReminded, addTask} = require("../services/TaskManager.js");
+const { isTaskDue, addTask} = require("../services/TaskManager.js");
 const { syncCalendar } = require('../services/CalendarSync.js');
 const fs = require('fs');
 const path = require('path');
-const { login, getTasks: getApiTask} = require('../services/ApiClient.js');
+const { login, getTasks: getApiTask, markReminded: markApiReminded } = require('../services/ApiClient.js');
 const { adaptApiTask } = require('../services/TaskAdapter.js');
 const authConfigPath = path.join(__dirname, '../../auth-config.json');
 
@@ -68,16 +68,16 @@ async function checkReminders() {
     const apiTasks = await getApiTask();
     const tasks = apiTasks.map(adaptApiTask);
 
-    tasks.forEach(element => {
+    for (const element of tasks) {
         if (isTaskDue(element)) {
             const notification = new Notification({
                 title: "Task Reminder",
                 body: element.text
             });
             notification.show();
-            markReminded(element.id);
+            await markApiReminded(element.id);
         }
-    });
+    }
 }
 app.whenReady().then(async () => {
     createWindow();

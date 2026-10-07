@@ -91,15 +91,22 @@ async function deleteTask(taskId) {
     return true;
 }
 
-async function test() {
-    await login("Jonnmp", "Bx20070225");
-    const resultado = await deleteTask(2);
-    console.log("Tarea eliminada:", resultado);
-    const tareas = await getTasks();
-    console.log("Tareas restantes:", tareas);
-}
+async function markReminded(taskId) {
+    const response = await fetch(`${API_BASE_URL}/tasks/${taskId}/`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({ last_reminded_at: new Date().toISOString() }),
+    });
 
-test();
+    if (!response.ok) {
+        throw new Error("No se pudo marcar la tarea como recordada");
+    }
+
+    return await response.json();
+}
 
 module.exports = {
     login,
@@ -107,7 +114,8 @@ module.exports = {
     createTask,
     getTasks,
     completeTask,
-    deleteTask
+    deleteTask,
+    markReminded
 };
 
 
