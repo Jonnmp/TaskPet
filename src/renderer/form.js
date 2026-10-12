@@ -6,8 +6,10 @@ const duedate = document.getElementById("duedate");
 const defaultTime = new Date().getTime() + (30 * 60 * 1000) - (new Date().getTimezoneOffset() * 60000);
 duedate.value = new Date(defaultTime).toISOString().slice(0, 16);
 const minutes = document.getElementById("minutes");
+let mode = "date";
 
 dateModeBtn.addEventListener("click", () => {
+    mode = "date";
     duedate.style.display = "block";
     minutes.style.display = "none";
     duedate.required = true;
@@ -15,6 +17,7 @@ dateModeBtn.addEventListener("click", () => {
 });
 
 minutesModeBtn.addEventListener("click", () => {
+    mode = "minutes";
     minutes.style.display = "block";
     duedate.style.display = "none";
     duedate.required = false;
@@ -32,8 +35,8 @@ form.addEventListener("submit", (event) => {
 
     ipcRenderer.send("send-task", {
         text: text,
-        reminder: date,
-        reminderMinutes : Number(mins),
-        reminderInterval : Number(interval),
+        reminder: mode === "date" && date ? new Date(date).toISOString() : null,
+        reminderMinutes : mode === "minutes" && mins !== ""? Number(mins) : null,
+        reminderInterval : interval === "" ? null : Number(interval),
         });
 });
