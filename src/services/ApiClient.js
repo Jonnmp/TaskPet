@@ -27,13 +27,45 @@ function getAccessToken() {
     return accessToken;
 }
 
-async function createTask(taskData) {
-    const response = await fetch(`${API_BASE_URL}/tasks/`, {
-        method: "POST",
+async function refreshAccessToken() {
+    const response = await fetch(`${API_BASE_URL}/token/refresh/`, {
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ refresh: refreshToken }),
+    });
+
+    if (!response.ok) {
+        throw new Error('Sesion expirada. Por favor, inicia sesión nuevamente.');
+    }
+
+    const data = await response.json();
+    accessToken = data.access;
+    refreshToken = data.refresh || refreshToken;
+}
+
+async function authFetch(url, options = {}) {
+    const makeRequest = () => fetch(url, {
+        ...options,
         headers: {
-            "Content-Type": "application/json",
+            ...options.headers,
             "Authorization": `Bearer ${accessToken}`,
         },
+    });
+
+    let response = await makeRequest();
+
+    if (response.status === 401) {
+        await refreshAccessToken();
+        response = await makeRequest();
+    }
+
+    return response;
+}
+
+async function createTask(taskData) {
+    const response = await authFetch(`${API_BASE_URL}/tasks/`, {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
         body: JSON.stringify(taskData),
     });
 
@@ -45,11 +77,8 @@ async function createTask(taskData) {
 }
 
 async function getTasks() {
-    const response = await fetch(`${API_BASE_URL}/tasks/`, {
+    const response = await authFetch(`${API_BASE_URL}/tasks/`, {
         method: "GET",
-        headers: {
-            "Authorization": `Bearer ${accessToken}`,
-        },
     });
 
     if (!response.ok) {
@@ -60,11 +89,10 @@ async function getTasks() {
 }
 
 async function completeTask(taskId) {
-    const response = await fetch(`${API_BASE_URL}/tasks/${taskId}/`, {
+    const response = await authFetch(`${API_BASE_URL}/tasks/${taskId}/`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${accessToken}`,
         },
         body: JSON.stringify({ completed: true }),
     });
@@ -77,11 +105,8 @@ async function completeTask(taskId) {
 }
 
 async function deleteTask(taskId) {
-    const response = await fetch(`${API_BASE_URL}/tasks/${taskId}/`, {
+    const response = await authFetch(`${API_BASE_URL}/tasks/${taskId}/`, {
         method: "DELETE",
-        headers: {
-            "Authorization": `Bearer ${accessToken}`,
-        },
     });
 
     if (!response.ok) {
@@ -92,11 +117,10 @@ async function deleteTask(taskId) {
 }
 
 async function markReminded(taskId) {
-    const response = await fetch(`${API_BASE_URL}/tasks/${taskId}/`, {
+    const response = await authFetch(`${API_BASE_URL}/tasks/${taskId}/`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer ${accessToken}`,
         },
         body: JSON.stringify({ last_reminded_at: new Date().toISOString() }),
     });
@@ -117,5 +141,4 @@ module.exports = {
     deleteTask,
     markReminded
 };
-
 
