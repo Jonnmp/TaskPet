@@ -1,9 +1,9 @@
 const { app, BrowserWindow, Notification, ipcMain, shell} = require ('electron');
-const { isTaskDue, addTask} = require("../services/TaskManager.js");
+const { isTaskDue } = require("../services/TaskManager.js");
 const { syncCalendar } = require('../services/CalendarSync.js');
 const fs = require('fs');
 const path = require('path');
-const { login, getTasks: getApiTask, markReminded: markApiReminded } = require('../services/ApiClient.js');
+const { login, getTasks: getApiTask, markReminded: markApiReminded, createTask } = require('../services/ApiClient.js');
 const { adaptApiTask } = require('../services/TaskAdapter.js');
 const authConfigPath = path.join(__dirname, '../../auth-config.json');
 
@@ -38,9 +38,18 @@ ipcMain.on("open-form", () => {
     formWindow.loadFile("src/renderer/form.html");
 });
 
-ipcMain.on("send-task", (event, taskData) => {
-    addTask(taskData);
-    formWindow.close();
+ipcMain.on("send-task", async (event, taskData) => {
+    try {
+        await createTask({
+            text: taskData.text,
+            reminder_at: taskData.reminder,
+            reminder_minutes: taskData.reminderMinutes,
+            reminder_interval: taskData.reminderInterval
+        });
+        formWindow.close();
+    } catch (error) {
+        console.error("No se pudo crear la tarea:", error);
+    }
 });
 
 let viewtask;
@@ -65,20 +74,25 @@ async function loginWithStoredCredentials() {
 }
 
 async function checkReminders() {
-    const apiTasks = await getApiTask();
-    const tasks = apiTasks.map(adaptApiTask);
+    try {
+        const apiTasks = await getApiTask();
+        const tasks = apiTasks.map(adaptApiTask);
 
-    for (const element of tasks) {
-        if (isTaskDue(element)) {
-            const notification = new Notification({
-                title: "Task Reminder",
-                body: element.text
-            });
-            notification.show();
-            await markApiReminded(element.id);
+        for (const element of tasks) {
+            if (isTaskDue(element)) {
+                const notification = new Notification({
+                    title: "Task Reminder",
+                    body: element.text
+                });
+                notification.show();
+                await markApiReminded(element.id);
+            }
         }
+    } catch (error) {
+        console.error("[checkReminders] Error:", error.message);
     }
 }
+
 app.whenReady().then(async () => {
     createWindow();
     await loginWithStoredCredentials();
